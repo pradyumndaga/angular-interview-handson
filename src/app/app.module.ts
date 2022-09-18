@@ -8,8 +8,9 @@ import { FetchApi } from './fetch.api';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from '../login/login.component';
 import { PipeModule } from '../shared/pipe/pipe.module';
+import { DirectiveModule } from '../shared/directive/directive.module';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule, FormsModule, ReactiveFormsModule, PipeModule ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, FormsModule, ReactiveFormsModule, PipeModule, DirectiveModule ],
   declarations: [ AppComponent, HelloComponent, LoginComponent ],
   providers: [FetchApi],
   bootstrap:    [ AppComponent ]
