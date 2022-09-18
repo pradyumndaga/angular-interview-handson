@@ -9,10 +9,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from '../login/login.component';
 import { PipeModule } from '../shared/pipe/pipe.module';
 import { DirectiveModule } from '../shared/directive/directive.module';
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule, FormsModule, ReactiveFormsModule, PipeModule, DirectiveModule ],
-  declarations: [ AppComponent, HelloComponent, LoginComponent ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PipeModule,
+    DirectiveModule,
+    AppRoutingModule,
+  ],
+  declarations: [AppComponent, HelloComponent, LoginComponent],
   providers: [FetchApi],
-  bootstrap:    [ AppComponent ]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
