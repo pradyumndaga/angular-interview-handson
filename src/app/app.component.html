@@ -1,0 +1,12 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)<br>
+  {{ message?.message}}
+</p>
+<div *ngIf="username; else login">
+<p>Username: <b>{{username | Upper}}</b> logged in Success!!</p>
+<button (click)="logout()">Logout</button>
+</div>
+<ng-template #login>
+<app-login [message]="message?.message" (username)="setUsername($event)" ></app-login>
+</ng-template>

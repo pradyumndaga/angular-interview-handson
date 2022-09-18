@@ -1,0 +1,9 @@
+<p>Child: {{message}}</p>
+
+<form [formGroup]="login" (ngSubmit)="onSubmit()">
+  <p>Email</p>
+  <input type="text" formControlName="email" />
+  <p>Password</p>
+  <input type="password" formControlName="password" /> <br /><br />
+  <input type="submit" />
+</form>
