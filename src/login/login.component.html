@@ -1,5 +1,5 @@
 <p>Child: {{ message }}</p>
-
+<ng-content></ng-content>
 <form [formGroup]="login" (ngSubmit)="onSubmit()">
   <p>Email</p>
   <input type="text" formControlName="email" />

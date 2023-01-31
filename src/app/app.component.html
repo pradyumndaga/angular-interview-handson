@@ -3,6 +3,17 @@
   Start editing to see some magic happen :)<br />
   {{ message?.message }}
 </p>
+<div>
+  Username: {{ user }}
+  <br/>
+  <input type="text" [(ngModel)]="user" (change)="changed()"/>
+  <br/>
+  Country: {{country}}
+  <br/>
+  <select [(ngModel)]="country">
+    <option *ngFor="let country of countryList">{{country}}</option>
+  </select>
+</div>
 <div *ngIf="username; else login">
   <p highlighter>
     Username: <b>{{ username | Upper }}</b> logged in Success!!
@@ -13,6 +24,6 @@
   <app-login
     [message]="message?.message"
     (username)="setUsername($event)"
-  ></app-login>
+  >Please enter login credentials</app-login>
 </ng-template>
 <router-outlet></router-outlet>

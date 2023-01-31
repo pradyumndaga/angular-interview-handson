@@ -8,6 +8,9 @@ import { FetchApi } from './fetch.api';
 })
 export class AppComponent implements OnInit {
   name = 'Angular ' + VERSION.major;
+  user: string;
+  countryList = ['IND', 'USD', 'UK'];
+  country: string;
   username: string;
   message: any;
   constructor(private fetchApi: FetchApi) {}
@@ -24,7 +27,11 @@ export class AppComponent implements OnInit {
   }
 
   logout() {
-    console.log('logout')
+    console.log('logout');
     this.username = '';
+  }
+
+  changed() {
+    console.log('changed', this.user);
   }
 }
